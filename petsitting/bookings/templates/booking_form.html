@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Request Pet Care</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Pet Care Request Form 🐶🐱</h2>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <label>Full Name</label>
+        <input type="text" name="full_name" required>
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Pet Type</label>
+        <input type="text" name="pet_type" required>
+
+        <label>Number of Pets</label>
+        <input type="number" name="number_of_pets" required>
+
+        <label>Duration</label>
+        <input type="text" name="duration" required>
+
+        <label>Address</label>
+        <textarea name="address" required></textarea>
+
+        <label>Special Instructions</label>
+        <textarea name="special_instructions"></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</div>
+
+</body>
+</html>
