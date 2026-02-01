@@ -1,1 +1,2 @@
-web: gunicorn petcare.wsgi
+web: gunicorn petsitting.wsgi:application
+
